@@ -1,7 +1,7 @@
 #Mainul  and Oliver's MADLIDcode
 
 
-print('check out newbie madlib code')
+print('check out our newbie madlib code')
 
 nouns = ['boy', 'girl', 'gorilla', 'apple', 'sandwich']
 verbs = ['eat', 'sleep', 'dance', 'swim']
