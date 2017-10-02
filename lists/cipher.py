@@ -1,4 +1,4 @@
-
+import math
 
 def rotate_char(c,r):
     """
@@ -22,5 +22,21 @@ def encode_string(s,r):
         result = result + letter
     return result
 
-r = encode_string("abde",3)
-print(r)
+def distance(l1,l2):
+    """
+    Euclidean distance between l1 and l2. If the lists are of 
+    different lengths, go to the lenght of the shorter one
+    """
+    length = len(l1)
+    if length>len(l2):
+        length = len(l2)
+    sum=0
+    for i in range(length):
+        sum = sum + (l1[i]-l2[i])*(l1[i]-l2[i])
+    d = math.sqrt(sum)
+    return d
+    
+
+l1 = [1,2,3]
+l2 = [10,2,3]
+print(distance(l1,l2))
