@@ -36,7 +36,15 @@ def distance(l1,l2):
     d = math.sqrt(sum)
     return d
     
+def build_frequency_vector(s):
+    # count the letters in the string
+    spaces = s.count(' ')
+    num_letters = len(s) - spaces
+    v=[]
+    for letter in "abcdefghijklmnopqrstuvwxyz":
+        v.append(s.count(letter) / num_letters)
 
-l1 = [1,2,3]
-l2 = [10,2,3]
-print(distance(l1,l2))
+    return v
+
+f = build_frequency_vector("aaabb")
+print(f)
