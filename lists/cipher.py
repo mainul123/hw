@@ -52,17 +52,32 @@ def print_vector_table(v):
     for i in range(26):
         print(s[i]," : ",v[i])
 
-s = "this is a longer sentence with more letters so hopefully it will be closer to the real distribution"
 
-r = encode_string(s,3)
+def decode(s):
+    rotations = []
+    frequencies = []
+    distances = []
+    for i in range(26):
+        rstring = encode_string(s,i)
+        freq = build_frequency_vector(rstring)
+        rotations.append(rstring)
+        frequencies.append(freq)
+        d = distance(freq, real_stats)
+        distances.append(d)
+    # find the smallest value and its index
+    min_index = 0
+    min_value = distances[0]
+    for i in range(1,len(distances)):
+        if distances[i] < min_value:
+            min_value = distances[i]
+            min_index = i
+    return(encode_string(s,min_index))
+    
+s2 = "this is a longer sentence with more letters so hopefully it will be closer to the real distribution"
 
-print(s)
-print(r)
-
-f = build_frequency_vector(s)
-
-print(distance(real_stats,f))
-print("\n--------------------------------------\n")
-f = build_frequency_vector(r)
-print(distance(real_stats,f))
-
+s = "Where is the beef"
+encoded = encode_string(s,5)
+decoded = decode(encoded)
+print("Original: ",s)
+print("Encoded: ", encoded)
+print("Decoded: ", decoded)
