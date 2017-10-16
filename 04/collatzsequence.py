@@ -7,7 +7,7 @@ def collatz(number):
             number = number // 2
         elif number % 2 == 1:
             print(number * 3 + 1)
-            number =  number *3 + 1
+            number =  number * 3 + 1
 number = input("enter number ")
 while number != 1:
     number = collatz(int(number))
