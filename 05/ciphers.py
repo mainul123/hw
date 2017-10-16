@@ -11,7 +11,7 @@ for letter in input():
     
     #string shift
 message = "just a simple test!"
-key = 11
+key = 8
 coded_message = ""
 for ch in message:
     code_val  = ord(ch) + key
