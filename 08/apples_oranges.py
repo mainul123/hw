@@ -17,7 +17,7 @@ org_countnt = 0
 
 for one_apple in apple:
     if one_apple > 0:
-        if t >= a + one_apple> = s:
+        if t >= a + one_apple >= s:
             app_cnt += 1
 for one_orange in orange:
     if one_orange < 0:
