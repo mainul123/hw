@@ -1,20 +1,31 @@
 def freq(n,l):
-    l = [2,3,4,5,6,7,7,7,7,7,7,4,7,6,4,4,2,11,3,43]
-    n = len([i for i in l if i == 7])
-    return n
+    start = 0
+    for num in l:
+        if (n == num):
+            start += 1
+    return start
 
-#change l value to find exact value
 
 def min(l):
-    l = [2,3,4,5,6,7,7,7,7,7,7,4,7,6,4,4,2,11,3,43]
-    x=l[0]
-    for i in l:
-        if i < x:
-            x=i
-    print(x)
+    ans = l[0]
+    for i in range(1,len(l)):
+        if l[i] < ans:
+            ans = l[i]
+    return ans
 
-from statistics import mode
-l = [2,3,4,5,6,7,7,7,7,7,7,4,7,6,4,4,2,11,3,43]
-mode(l)   
+
+def mode(l):
+    mode_in_l = 0
+    current_mode = 0
+    for int in l:
+        if freq(int,l) > mode_in_l:
+            mode_in_l = int
+            current_mode = freq(int,l)
+    return mode_in_l
+
+s = [1,3,3,3,7,6,543,534,534,5,343,3,]
+
+print(mode(s))
+
 
   
