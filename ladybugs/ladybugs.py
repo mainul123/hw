@@ -4,7 +4,14 @@
 
 
 def are_happy(s):
-    
+    '''
+    This might miss some of the real edge cases in the hackerrank
+    problem. I haven't read the problem carefully in over a year and 
+    forget what it specified for things like lists of only spaces,
+    lists with only one bug etc.
+
+    Also, the Hackerrank question uses an underscore (_) instead of a space.
+    '''
     # handle a string of less than 2 ladybugs
     if len(s)<2:
         return False
@@ -21,7 +28,7 @@ def are_happy(s):
         # check the one before and the one after
         # if we ever have an unhappy bug, we can just return False
         for i in range(1,len(s)-1):
-            if l[i] != l[i+1] and l[i] != l[i-1]:
+            if s[i] != s[i+1] and s[i] != s[i-1]:
                 return False
 
         # if we ever get here every bug has at least one neighbor of the same color
