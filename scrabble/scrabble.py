@@ -10,7 +10,8 @@ def make_scrabble_board():
         for i in range(15):
             line.append('_')
         board.append(line)
-
+    
+    
     for r,c in TRIPLE_WORD_SCORE:
         board[r][c] = 'T'
 
@@ -31,3 +32,4 @@ def print_board(b):
         
 
 
+     
