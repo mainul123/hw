@@ -22,7 +22,7 @@ if 'NOUN'in story:
 if 'ADJECTIVE.'in story:
     random.shuffle(adjective)
     num = story.find('ADJECTIVE')
-    story = story[:num] + adjective[1] + story[num+3:]
+    story = story[:num] + adjective[1] + story[num+9:]
 
 
 print(story)

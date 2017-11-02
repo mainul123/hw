@@ -1,27 +1,10 @@
-def rle(s):
-    encoded = []
-    while len(s)>1:
-        runlen = 1
-        runchar = s[0]
-        while runlen < len(s) and s[runlen]==runchar:
-            runlen = runlen + 1
-        if runlen>1:
-            encoded.append(runlen)
-        encoded.append(runchar)
-        s=s[runlen:]
-    return encoded
-
-
-s = "aavbbbbbccdddddd"
-print(s)
-print(rle(s))
 
 def rle_decode(s):
 	decode = ''
 	x = 0
 	while x < len(s):
 
-		if (isinstance(s[x],int) == True):
+		if (isinstance(s[x],int) == True): #isinstance checks to see the type, therefore an integer
 			decode = decode + (s[x+1]*s[x])
 			x = x + 2
 		else:

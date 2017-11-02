@@ -1,4 +1,3 @@
-print('welcome to Mainuls piglatin program')
 
 pyg ="ay"
 

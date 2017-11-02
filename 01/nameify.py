@@ -1,3 +1,4 @@
 
 s="word1 word2"
-s.upper()
+x = s.upper()
+print(x)

@@ -25,6 +25,8 @@ def mode(l):
 
 s = [1,3,3,3,7,6,543,534,534,5,343,3,]
 
+print(min(s))
+print(freq(3,s))
 print(mode(s))
 
 

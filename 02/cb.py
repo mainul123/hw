@@ -56,3 +56,10 @@ def caught_speeding(speed, is_birthday):
   if 60 < speed <= 80:
     return 1
   return 2
+
+
+print(string_times('hello' , 4))
+print(front_times('bestie', 4))
+print(string_bits('everything'))
+print(lone_sum(4, 2, 4))
+
