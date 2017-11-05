@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html>
+    <head></head>
+    <body>
+	<h1>This is the DATA PAGE</h1>
+	<hr/>
+	<h2>This is a subtitle</h2>
+	<h3>v: {{v}}</h3>
+	<h3> the list: {{list}}, list[2] = {{list[2]}}</h3>
+	<ul>
+	    {% for item in list %}
+		<li>{{item}}</li>
+	    {% endfor %}
+	</ul>
+	<hr/>
+	<h3>d - {{d}} - first: {{d['first']}} or  {{d.first}}</h3>
+	<ul>
+	    {% for k in d %}
+		<li>{{k}} - {{d[k]}}</li>
+	    {% endfor %}
+	</ul>
+	<h1>Your lucky number is {{lucky}}</h1>
+    </body>
+</html>
