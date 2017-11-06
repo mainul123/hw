@@ -20,7 +20,7 @@ def bwcff(f):
     """
     input: f - string representing a filename
     returns: a dictionary with keys for words and values
-             of the number of times each word occurs
+             of the number of times each word occursb
     """
     text = open(f).read()
     l=[]
