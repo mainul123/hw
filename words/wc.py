@@ -1,4 +1,8 @@
-def rp(w):
+def remove_non_alpha(w):
+    """
+    input: w - string representing a "word"
+    output: the string with non alpha chars removed
+    """
     result=""
     for l in w:
         if l.isalpha():
@@ -13,11 +17,16 @@ def bwcd(wordlist):
     return d
 
 def bwcff(f):
-    f = open(f).read()
+    """
+    input: f - string representing a filename
+    returns: a dictionary with keys for words and values
+             of the number of times each word occursb
+    """
+    text = open(f).read()
     l=[]
-    for w in f.split():
+    for w in text.split():
         w = w.lower()
-        w = rp(w)
+        w = remove_non_alpha(w)
         l.append(w)
     d = bwcd(l)
     return d
