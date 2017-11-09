@@ -47,7 +47,8 @@ def add_words(f):
         next_word = words_list[i+1]
         if word in words_dict:
             words_dict[word].append(next_word)
-        elif word not in words_dict:
+        else:
+            word not in words_dict
             words_dict[word] = [next_word]
         return words_dict
     
